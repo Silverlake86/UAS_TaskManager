@@ -1,0 +1,146 @@
+FORMAT: 1A
+HOST: localhost/
+
+# UAS
+
+Task manager yang mengatur task perkantoran. 
+
+## Data - Data Task [/project]
+
+### Semua list task [GET/project/get.php]
+
++ Response 200 (application/json)
+
+        [
+            {
+            "task": [
+                {
+                    "task_name": "Report Submission",
+                    "description": "Submit financial report ASAP!",
+                    "name": "setiawanjunior2000",
+                    "date_posted": "2021-05-03",
+                    "due_date": "2021-05-22",
+                    "status": "PENDING"
+                },
+                {
+                    "task_name": "Payment",
+                    "description": "Monthly salary distribution.",
+                    "name": "ms2000",
+                    "date_posted": "2021-05-03",
+                    "due_date": "2021-05-07",
+                    "status": "PENDING"
+                },
+                {
+                    "task_name": "Testing",
+                    "description": "ujian testing 22",
+                    "name": "Junior",
+                    "date_posted": "2021-05-12",
+                    "due_date": "2021-06-12",
+                    "status": "PENDING"
+                }
+            ]
+        }
+        ]
+
+### Membuat & Mendaftar Task baru [POST]
+
+Untuk menambah task baru
+
++ Request (application/json)
+
+        {
+        "Task Data": [
+        {
+            $task_name = $_POST["task_name"];
+            $description = $_POST["description"];
+            $name = $_POST["name"];
+            $date_posted = $_POST["date_posted"];
+            $due_date = $_POST["due_date"];
+            $status = $_POST["status"];
+        }
+        ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /project/post.php
+
+    + Body
+
+            {
+            "Task Data": [
+            {
+                "task_name": "",
+                "description": "",
+                "name": "",
+                "date_posted": "",
+                "due_date": "",
+                "status": ""
+            },
+            ]
+            }
+            
+### Update data task [PUT]
+
+untuk mengupdate data task 
+
++ Request (application/json)
+
+        {
+        "Task Status": [
+        {
+            "task_id": "task_id",
+        }
+        ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /project/update.php
+
+    + Body
+
+            {
+            "Task Status": [
+            {
+                "task_id": "",
+                "task_name": "",
+                "description": "",
+                "name": "",
+                "date_posted": "",
+                "due_date": "",
+                "status": ""
+            },
+            ]
+            }
+            
+### Menghapus data task [DELETE/project/delete.php]
+
+untuk menghapus data task. 
+
++ Request (application/json)
+
+        {
+        "Status Data Task": [
+        {
+            "task_id": "task_id",
+        }
+        ]
+        }
+        
+        + Response 201 (application/json)
+
+    + Headers
+
+            Location: /project/delete
+
+    + Body
+
+            {
+            " Task is Successfully Deleted. "
+            ]
+            }
