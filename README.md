@@ -7,11 +7,16 @@ Requirement yang diperlukan:
 3. Postman
 4. Notepad atau aplikasi coding untuk mengedit code atau melihat code
 
+Cara mendaftarkan data :
+1. buka localhost/phpmyadmin di web browser
+2. tekan import untuk import database
+3. pilih file "project.sql" dan tekan go
+
 Cara menjalankan aplikasi : 
 1. Download aplikasi XAMPP 
 2. Jalankan aplikasi XAMPP (centang bagian Apache MySQL dan PHPmyadmin).
-3. Download zip yang berisi code
-4. Taruh file tersebut dan ekstrak ke dalam folder tersebut di dalam htdocs 
+3. Download folder yang berisi code
+4. Taruh folder tersebut dan ekstrak ke dalam folder tersebut di dalam htdocs 
 
 Terdapat 4 fitur yang dibuat
 1. Get Data : 
